@@ -25,3 +25,9 @@ Reference:
 > POST http://localhost:5000/api/auth/signin
 
 {"usernameOrEmail": "nqlong3@gmail.com","password":"123456"}
+
+ telnet 35.247.142.226 8080
+ 
+ https://linuxize.com/post/how-to-setup-a-firewall-with-ufw-on-ubuntu-18-04/
+ 
+ 
