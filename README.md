@@ -15,3 +15,13 @@ For assigning the roles, they have to be present in the database. So let’s cre
 
 Reference: 
 > https://www.callicoder.com/spring-boot-spring-security-jwt-mysql-react-app-part-1/
+
+## Demo
+
+> POST  http://localhost:5000/api/auth/signup -d 
+{ "name":"nqlong","username":"Long3","email": "nqlong3@gmail.com", "password":"123456"}
+</br>
+
+> POST http://localhost:5000/api/auth/signin
+
+{"usernameOrEmail": "nqlong3@gmail.com","password":"123456"}
