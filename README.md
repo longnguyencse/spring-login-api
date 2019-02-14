@@ -30,4 +30,6 @@ Reference:
  
  https://linuxize.com/post/how-to-setup-a-firewall-with-ufw-on-ubuntu-18-04/
  
- 
+ netstat -an | grep "LISTEN "
+ wget localhost:5000
+ sudo ufw status
