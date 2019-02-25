@@ -1,7 +1,10 @@
 # Install plugin Swagger 2
 > https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api
+
 > https://springframework.guru/spring-boot-restful-api-documentation-with-swagger-2/
+
 > http://localhost:5000/v2/api-docs
+
 > http://localhost:5000/swagger-ui.html
 
 ## Tutorial
@@ -57,3 +60,6 @@ protected API by passing the accessToken in the Authorization header of the requ
  > SecurityContextHolder.getContext().getAuthentication();
  
  ![alt text](https://github.com/longnguyencse/spring-login-api/blob/master/data/image/parse-token.png "JWT")
+ 
+ </br>
+ Reference: https://www.toptal.com/java/rest-security-with-jwt-spring-security-and-java
