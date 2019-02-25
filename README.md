@@ -56,4 +56,4 @@ protected API by passing the accessToken in the Authorization header of the requ
  
  > SecurityContextHolder.getContext().getAuthentication();
  
- ![alt text](https://github.com/adam-p/markdown-here/raw/master/data/images/parse-token.png "JWT")
+ ![alt text](https://github.com/longnguyencse/spring-login-api/blob/master/data/image/parse-token.png "JWT")
