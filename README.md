@@ -1,12 +1,8 @@
-## Install plugin Swagger 2
+# Install plugin Swagger 2
 > https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api
-
 > https://springframework.guru/spring-boot-restful-api-documentation-with-swagger-2/
-
 > http://localhost:5000/v2/api-docs
-
 > http://localhost:5000/swagger-ui.html
-
 
 ## Tutorial
 1. Database is generate automation but you must creating default roles </br>
@@ -34,6 +30,10 @@ Reference:
  
  https://linuxize.com/post/how-to-setup-a-firewall-with-ufw-on-ubuntu-18-04/
  
+ netstat -an | grep "LISTEN "
+ wget localhost:5000
+ sudo ufw status
+
  # Running your Application
  ## Using the Maven Plugin
  > mvn spring-boot:run
