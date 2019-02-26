@@ -63,3 +63,12 @@ protected API by passing the accessToken in the Authorization header of the requ
  
  </br>
  Reference: https://www.toptal.com/java/rest-security-with-jwt-spring-security-and-java
+
+## Custom query with @Query annotation.
+I've used custom queries because:
+- Many of the queries cannot be constructed by Spring-Data-Jpa's dynamic query methods (
+https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.details)
+</br>
+- Even if they can be constructed, they don't generate an optimized query
+
+> https://docs.oracle.com/cd/E12839_01/apirefs.1111/e13946/ejb3_langref.html#ejb3_langref_constructor
