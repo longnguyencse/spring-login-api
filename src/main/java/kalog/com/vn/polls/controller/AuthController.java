@@ -92,4 +92,11 @@ public class AuthController {
 
         return ResponseEntity.created(location).body(new ApiResponse(true, "User registered successfully"));
     }
+
+    @RequestMapping(value="/getCustomer",method= RequestMethod.GET,produces="application/json")
+    public ResponseEntity<String> getCustomer(){
+        String a = "Spring boot";
+        return new ResponseEntity<String>(a, HttpStatus.OK);
+    }
+
 }

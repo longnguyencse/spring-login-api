@@ -72,3 +72,18 @@ https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories
 - Even if they can be constructed, they don't generate an optimized query
 
 > https://docs.oracle.com/cd/E12839_01/apirefs.1111/e13946/ejb3_langref.html#ejb3_langref_constructor
+
+# Multi profile <Support multiple profiles with Spring boot
+1. Create 3 file name : 
+> application-dev.properties 
+> application-test.properties 
+> application-prod.properties
+ 
+2. config profile use 
+> spring.profiles.active=dev
+
+# i18n
+> https://medium.com/skillhive/internalization-in-spring-boot-22f4fa82f132
+> https://www.javadevjournal.com/spring-boot/spring-boot-internationalization/
+# RabitMQ
+

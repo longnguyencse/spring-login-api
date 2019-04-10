@@ -6,7 +6,6 @@ import kalog.com.vn.polls.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 @Component
 public class ProductServieImpl implements ProductService {
@@ -17,6 +16,5 @@ public class ProductServieImpl implements ProductService {
     @Override
     public PageWrapDto findAllProduct(Pageable pageable) {
         return PageWrapDto.pagable(productRepository.findAll(pageable));
-//        return null;
     }
 }
