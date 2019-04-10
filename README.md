@@ -86,4 +86,4 @@ https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories
 > https://medium.com/skillhive/internalization-in-spring-boot-22f4fa82f132
 > https://www.javadevjournal.com/spring-boot/spring-boot-internationalization/
 # RabitMQ
-
+> https://spring.io/guides/gs/messaging-rabbitmq/
