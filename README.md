@@ -85,5 +85,16 @@ https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories
 # i18n
 > https://medium.com/skillhive/internalization-in-spring-boot-22f4fa82f132
 > https://www.javadevjournal.com/spring-boot/spring-boot-internationalization/
+
 # RabitMQ
 > https://spring.io/guides/gs/messaging-rabbitmq/
+
+# Add Lombok
+1. Add to pom.xml
+2. Install plugin Lombok
+
+# Encode vietnamese
+1. Plugin Eclipse : AnyEdit Tool plugin
+> https://marketplace.eclipse.org/content/anyedit-tools
+
+# Utils date (importment)
