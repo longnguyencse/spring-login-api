@@ -2,6 +2,8 @@ package kalog.com.vn.polls.controller;
 
 import kalog.com.vn.polls.dto.PageWrapDto;
 import kalog.com.vn.polls.dto.WrapDataDto;
+import kalog.com.vn.polls.models.Product;
+import kalog.com.vn.polls.repository.jdbc.ProductJdbc;
 import kalog.com.vn.polls.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
@@ -10,10 +12,13 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
+import org.springframework.web.servlet.support.RequestContextUtils;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 import java.util.Locale;
 import java.util.Optional;
+import java.util.TimeZone;
 
 @RestController
 @RequestMapping(value = "/products")
@@ -24,6 +29,12 @@ public class ProductController {
 
     @Autowired
     MessageSource messageSource;
+
+    @Autowired
+    HttpServletRequest request;
+
+    @Autowired
+    ProductJdbc productJdbc;
 
     @GetMapping(value = "/all")
     public PageWrapDto getAllProducts(@RequestParam int page, @RequestParam int size) {
@@ -46,5 +57,18 @@ public class ProductController {
         Locale locale = Locale.forLanguageTag(language.orElse("fr"));
         String message =  messageSource.getMessage("hi", null, locale );
         return new WrapDataDto(message);
+    }
+
+    @GetMapping(value = "/timezone")
+    public WrapDataDto getTimezone() {
+        TimeZone timezone = RequestContextUtils.getTimeZone(request);
+        return new WrapDataDto(timezone);
+    }
+
+    @GetMapping(value = "/jdbcdemo")
+    public WrapDataDto getProductGroupByName(@RequestParam(value = "size") int size,
+                                             @RequestParam(value = "page") int page) {
+        List<Product> productList = productJdbc.findPeoductDistinctName(size, page);
+        return WrapDataDto.builder().data(productList).build();
     }
 }
