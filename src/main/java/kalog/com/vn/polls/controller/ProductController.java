@@ -15,10 +15,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.servlet.support.RequestContextUtils;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
-import java.util.Locale;
-import java.util.Optional;
-import java.util.TimeZone;
+import java.util.*;
 
 @RestController
 @RequestMapping(value = "/products")
@@ -69,6 +66,7 @@ public class ProductController {
     public WrapDataDto getProductGroupByName(@RequestParam(value = "size") int size,
                                              @RequestParam(value = "page") int page) {
         List<Product> productList = productJdbc.findPeoductDistinctName(size, page);
+        Set set = Set.of("aa", "bb");
         return WrapDataDto.builder().data(productList).build();
     }
 }

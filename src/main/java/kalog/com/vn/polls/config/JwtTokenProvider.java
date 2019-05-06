@@ -8,7 +8,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
+
+import javax.persistence.ManyToOne;
 import java.util.Date;
+import java.util.Map;
 
 @Component
 public class JwtTokenProvider {
@@ -32,6 +35,11 @@ public class JwtTokenProvider {
                 .setSubject(Long.toString(userPrincipal.getId()))
                 .setIssuedAt(new Date())
                 .setExpiration(expiryDate)
+                .setClaims(Map.ofEntries(Map.entry("iss ", "kalog.com.vn"), Map.entry("sub", "certiticate"),
+                        Map.entry("aud", "Client"), Map.entry("name", userPrincipal.getName()),
+                        Map.entry("id", userPrincipal.getId()),
+                        Map.entry("email", userPrincipal.getEmail()),
+                        Map.entry("authorities", userPrincipal.getAuthorities())))
                 .signWith(SignatureAlgorithm.HS512, jwtSecret)
                 .compact();
     }
