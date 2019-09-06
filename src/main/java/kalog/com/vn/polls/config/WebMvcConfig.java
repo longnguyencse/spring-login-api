@@ -16,4 +16,17 @@ public class WebMvcConfig implements WebMvcConfigurer {
                 .allowedMethods("HEAD", "OPTIONS", "GET", "POST", "PUT", "PATCH", "DELETE")
                 .maxAge(MAX_AGE_SECS);
     }
+
+    /**
+     * config i18n diff folder
+     */
+//    @Bean(name = "messageSource")
+//    public MessageSource getMessageResource()  {
+//        ReloadableResourceBundleMessageSource messageResource= new ReloadableResourceBundleMessageSource();
+//
+//        messageResource.setBasename("classpath:i18n/messages");
+//        messageResource.setDefaultEncoding("UTF-8");
+//        messageResource.setFallbackToSystemLocale(false);
+//        return messageResource;
+//    }
 }
